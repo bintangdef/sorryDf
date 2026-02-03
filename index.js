@@ -1,3 +1,15 @@
+$("#openBtn").click(function () {
+  $("#opening").fadeOut(500);
+
+  const music = document.getElementById("bgMusic");
+  music.play().catch((error) => {
+    console.log("Autoplay preventer still active:", error);
+  });
+
+  const video = document.getElementById("myVideo");
+  video.play();
+});
+
 $("#yesBtn").click(function () {
   $("video").hide();
   $("#msg").hide();
@@ -23,7 +35,7 @@ function changeContent(kode, pict, text) {
   $("p").text(text);
 }
 
-const audioElement = new Audio("./assets/audio/dry-fart.mp3");
+const audioElement = new Audio("./assets/audio/btn-effect.mp3");
 
 $("#noBtn").click(function () {
   audioElement.play();

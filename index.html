@@ -7,14 +7,35 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <audio autoplay>
-      <source
-        src="./assets/audio/Donne Maula - Bercinta Lewat Kata (Official Lyric Video) OST Jatuh Cinta Seperti di Film-Film.mp3"
-        type="audio/mpeg"
-      />
+    <div
+      id="opening"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fabbe4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      "
+    >
+      <button
+        id="openBtn"
+        style="padding: 20px 40px; font-size: 1.2rem; cursor: pointer"
+      >
+        Buka Pesan ❤️
+      </button>
+    </div>
+
+    <audio id="bgMusic">
+      <source src="./assets/audio/bg-music.mp3" type="audio/mpeg" />
     </audio>
+
     <div class="container">
-      <video autoplay muted loop>
+      <video id="myVideo" autoplay muted loop>
         <source src="./assets/videos/vid1.mp4" type="video/mp4" />
       </video>
       <img />
